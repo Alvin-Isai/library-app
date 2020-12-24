@@ -22,7 +22,7 @@ function submitBook() {
     addBookToLibrary(new Book(bname, aname, pages, read))
     
     location.reload()
-}
+};
 
 function addBookToLibrary(book) {
     myLibrary.push(book)
@@ -30,8 +30,6 @@ function addBookToLibrary(book) {
     renderBook()
 };
 
-
-    
 function renderBook() {
     const books = document.querySelectorAll('.book')
     
@@ -40,8 +38,8 @@ function renderBook() {
 
     for (let i=0; i<myLibrary.length; i++){
         createHtml(myLibrary[i]);
-    }
-}
+    };
+};
 
 function createHtml(item) {
     
@@ -72,14 +70,14 @@ function createHtml(item) {
     readDiv.textContent = 'Read:';
     readDiv.classList.add('read');
     bookDiv.appendChild(readDiv);
-    checkbox.checked = item.read
-    readDiv.appendChild(checkbox)
+    checkbox.checked = item.read;
+    readDiv.appendChild(checkbox);
 
-    deleteBut.textContent = 'Delete Book'
-    deleteBut.classList.add('delete')
-    bookDiv.appendChild(deleteBut)
+    deleteBut.textContent = 'Delete Book';
+    deleteBut.classList.add('delete');
+    bookDiv.appendChild(deleteBut);
 
-    container.appendChild(bookDiv)
+    container.appendChild(bookDiv);
 
     
     deleteBut.addEventListener('click', function()  {
@@ -87,7 +85,7 @@ function createHtml(item) {
         myLibrary.splice(toDelete, 1)
         localSave()
         renderBook()
-    })
+    });
 
     checkbox.addEventListener('click', function() {
         if (item.read == true) {
@@ -97,9 +95,9 @@ function createHtml(item) {
         }
         localSave()
         renderBook()
-    })
+    });
 
-}
+};
 
   
 
@@ -120,7 +118,7 @@ function restore() {
         myLibrary = objects;
         renderBook();
     }
-}
+};
 
-restore()
+restore();
 
