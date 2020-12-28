@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    <h1>My Library</h1>
+    <header class="top">
+        <h1 class="top-title">My Library</h1>
+    </header>
+    
 
     <section>
         <h2 class="hidden">My Books</h2>
@@ -35,10 +38,11 @@
             <input type="checkbox" id="read" name="read"><br>
         </div>
         <div class="submit-button">
-            <button type="submit" onclick="submitBook()">submit</button>
+            <button type="submit" onclick="submitBook()">Submit</button>
+            <button onclick="closeForm()">Close</button>
         </div>
             
-        <button onclick="newBook()">+ New Book</button>
+        <button id="new" onclick="openForm()">+ New Book</button>
     </section>
     <script src="script.js"></script>
 </body>

@@ -12,17 +12,105 @@
 
 /* Top site */
 
-h1 {
+.top {
     margin: 0 auto;
-    text-align: center;
     width: 100%;
     height: 100px;
-    font-size: 60px !important;
-    background: red;
+    background:#c6bcb6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.book {
+.top .top-title {
+    font-size: 60px !important;
+    
+}
+
+
+
+/* body site */
+
+body {
+    background: #e0e2e4;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.container .book {
+    margin: 100px 10px;
+    background: #625750;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 5px 10px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.book .title {
+    background: #96897f;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto 30px;
+    font-size: 20px;
+    
+}
+
+.book .author {
+    margin-bottom: 10px;
+    color: white;
+}
+.book .pages {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.book .read {
+    color: white;
     margin-bottom: 20px;
-    border: 1px solid red;
+}
+
+.book .delete {
     width: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Book form */
+
+.book-form, .submit-button {
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    justify-content: center;
+    align-content: center;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#read {
+    margin: 5px auto ;
+    font-size: 50px;
+}
+
+#new {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    background: black; 
 }

@@ -101,7 +101,15 @@ function createHtml(item) {
 
   
 
-addEventListener
+function openForm() {
+    document.querySelector('.book-form').style.display = 'flex'
+    document.querySelector('.submit-button').style.display = 'flex'
+}
+
+function closeForm() {
+    document.querySelector('.book-form').style.display = 'none'
+    document.querySelector('.submit-button').style.display = 'none'
+}
 
 // Saves book objects
 
